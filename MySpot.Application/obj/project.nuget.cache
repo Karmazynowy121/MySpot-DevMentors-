@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7KWlvNthrm86YtDnVJ4OdQDBBhvdT1crsXvOAtjSCDDHUAmIOh72ynQqYOqhU9GDoTQY2QSEEMcl/7RqsATKfQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Karmazynowy\\Desktop\\MySpot\\MySpot.Application\\MySpot.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Karmazynowy\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "MySpot.Core": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:53410;http://localhost:53411"
+    }
+  }
+}

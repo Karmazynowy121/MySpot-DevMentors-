@@ -1,0 +1,17 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Karmazynowy121
+	email = atak121@wp.pl
+[pull]
+	rebase = false
+[core]
+	editor = \"C:\\Users\\Karmazynowy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
+[difftool "sourcetree"]
+	cmd = "'' "
+[mergetool "sourcetree"]
+	cmd = "'' "
+	trustExitCode = true
