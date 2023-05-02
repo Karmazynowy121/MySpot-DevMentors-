@@ -1,11 +1,11 @@
+C:\Users\Karmazynowy\Desktop\MySpot\MySpot.Core\bin\Debug\net6.0\MySpot.Core.deps.json
+C:\Users\Karmazynowy\Desktop\MySpot\MySpot.Core\bin\Debug\net6.0\MySpot.Core.dll
+C:\Users\Karmazynowy\Desktop\MySpot\MySpot.Core\bin\Debug\net6.0\MySpot.Core.pdb
 C:\Users\Karmazynowy\Desktop\MySpot\MySpot.Core\obj\Debug\net6.0\MySpot.Core.csproj.AssemblyReference.cache
 C:\Users\Karmazynowy\Desktop\MySpot\MySpot.Core\obj\Debug\net6.0\MySpot.Core.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Karmazynowy\Desktop\MySpot\MySpot.Core\obj\Debug\net6.0\MySpot.Core.AssemblyInfoInputs.cache
 C:\Users\Karmazynowy\Desktop\MySpot\MySpot.Core\obj\Debug\net6.0\MySpot.Core.AssemblyInfo.cs
 C:\Users\Karmazynowy\Desktop\MySpot\MySpot.Core\obj\Debug\net6.0\MySpot.Core.csproj.CoreCompileInputs.cache
-C:\Users\Karmazynowy\Desktop\MySpot\MySpot.Core\bin\Debug\net6.0\MySpot.Core.deps.json
-C:\Users\Karmazynowy\Desktop\MySpot\MySpot.Core\bin\Debug\net6.0\MySpot.Core.dll
-C:\Users\Karmazynowy\Desktop\MySpot\MySpot.Core\bin\Debug\net6.0\MySpot.Core.pdb
 C:\Users\Karmazynowy\Desktop\MySpot\MySpot.Core\obj\Debug\net6.0\MySpot.Core.dll
 C:\Users\Karmazynowy\Desktop\MySpot\MySpot.Core\obj\Debug\net6.0\refint\MySpot.Core.dll
 C:\Users\Karmazynowy\Desktop\MySpot\MySpot.Core\obj\Debug\net6.0\MySpot.Core.pdb

@@ -1,13 +1,21 @@
 ﻿
 
+using Humanizer;
 using Microsoft.AspNetCore.Http;
-using MySpot.Application.Services;
+using Microsoft.Extensions.Logging;
 
 namespace MySpot.Infrastructure.Exceptions
 {
     internal sealed class ExceptionMiddleware : IMiddleware
     {
+        private ILogger<ExceptionMiddleware> _logger;
 
+        public ExceptionMiddleware(ILogger<ExceptionMiddleware> logger) 
+        {
+            _logger = logger;
+        }
+
+        public ILogger<ExceptionMiddleware> Logger { get; }
 
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
@@ -17,7 +25,7 @@ namespace MySpot.Infrastructure.Exceptions
             }
             catch (Exception exception)
             {
-                Console.WriteLine(exception.ToString());
+                _logger.LogError(exception, exception.Message);
                 await HandleExceptionAsync(exception, context);
             }
         }
@@ -27,7 +35,7 @@ namespace MySpot.Infrastructure.Exceptions
             var (statusCode, error) = exception switch
             {
                 CustomException => (StatusCodes.Status400BadRequest,new Error (exception
-                .GetType().Name.UnderScore.Replace("Exception", string.Empty), exception.Message)),
+                .GetType().Name.Underscore().Replace("_exception", string.Empty), exception.Message)),
                 _ => (StatusCodes.Status500InternalServerError, new Error ("error", "There was an error."))
             };
 

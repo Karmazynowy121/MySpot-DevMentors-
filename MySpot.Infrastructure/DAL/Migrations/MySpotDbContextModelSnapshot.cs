@@ -27,17 +27,15 @@ namespace MySpot.Infrastructure.DAL.Migrations
                     b.Property<Guid>("Id")
                         .HasColumnType("uuid");
 
-                    b.Property<DateTimeOffset?>("Date")
+                    b.Property<int>("Capacity")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTimeOffset>("Date")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("EmployeeName")
+                    b.Property<string>("Type")
+                        .IsRequired()
                         .HasColumnType("text");
-
-                    b.Property<string>("LicensePlate")
-                        .HasColumnType("text");
-
-                    b.Property<Guid?>("ParkingSpotId")
-                        .HasColumnType("uuid");
 
                     b.Property<Guid?>("WeeklyParkingSpotId")
                         .HasColumnType("uuid");
@@ -47,12 +45,61 @@ namespace MySpot.Infrastructure.DAL.Migrations
                     b.HasIndex("WeeklyParkingSpotId");
 
                     b.ToTable("Reservations");
+
+                    b.HasDiscriminator<string>("Type").HasValue("Reservation");
+                });
+
+            modelBuilder.Entity("MySpot.Core.Entities.User", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("character varying(30)");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("character varying(30)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.HasIndex("Username")
+                        .IsUnique();
+
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("MySpot.Core.Entities.WeeklyParkingSpot", b =>
                 {
                     b.Property<Guid>("Id")
                         .HasColumnType("uuid");
+
+                    b.Property<int>("Capacity")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Name")
                         .HasColumnType("text");
@@ -63,6 +110,26 @@ namespace MySpot.Infrastructure.DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("WeeklyParkingSpots");
+                });
+
+            modelBuilder.Entity("MySpot.Core.Entities.CleaningReservation", b =>
+                {
+                    b.HasBaseType("MySpot.Core.Entities.Reservation");
+
+                    b.HasDiscriminator().HasValue("CleaningReservation");
+                });
+
+            modelBuilder.Entity("MySpot.Core.Entities.VehicleReservation", b =>
+                {
+                    b.HasBaseType("MySpot.Core.Entities.Reservation");
+
+                    b.Property<string>("EmployeeName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("LicensePlate")
+                        .HasColumnType("text");
+
+                    b.HasDiscriminator().HasValue("VehicleReservation");
                 });
 
             modelBuilder.Entity("MySpot.Core.Entities.Reservation", b =>
