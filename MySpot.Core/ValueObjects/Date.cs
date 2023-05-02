@@ -30,5 +30,7 @@
             => date1.Value >= date2.Value;
 
         public static Date now => new(DateTimeOffset.Now);
+
+        public override string ToString() => Value.ToString("d");
     }
 }

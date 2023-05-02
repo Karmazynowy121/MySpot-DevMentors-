@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MySpot.Application", "MySpo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MySpot.Infrastructure", "MySpot.Infrastructure\MySpot.Infrastructure.csproj", "{68AD03D8-B3C8-4AF2-B77A-078A8DA340FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySpots.Tests.Integration", "MySpots.Tests.Integration\MySpots.Tests.Integration.csproj", "{7DDD2EAB-AAB5-46C7-ACFB-5EBB6D8D29AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{68AD03D8-B3C8-4AF2-B77A-078A8DA340FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68AD03D8-B3C8-4AF2-B77A-078A8DA340FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68AD03D8-B3C8-4AF2-B77A-078A8DA340FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DDD2EAB-AAB5-46C7-ACFB-5EBB6D8D29AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DDD2EAB-AAB5-46C7-ACFB-5EBB6D8D29AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DDD2EAB-AAB5-46C7-ACFB-5EBB6D8D29AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DDD2EAB-AAB5-46C7-ACFB-5EBB6D8D29AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{36743B15-EEAE-4262-AE22-A3584B123C53} = {384B4B29-2151-426D-A99D-530253CE3121}
 		{6BF14817-FE12-44B9-89FD-307ED800F0FE} = {384B4B29-2151-426D-A99D-530253CE3121}
 		{68AD03D8-B3C8-4AF2-B77A-078A8DA340FB} = {384B4B29-2151-426D-A99D-530253CE3121}
+		{7DDD2EAB-AAB5-46C7-ACFB-5EBB6D8D29AD} = {071342CF-FA1E-4EE4-ADFB-2B170226BF3C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3040DBDB-6863-4499-B721-4C2DF71E9C58}

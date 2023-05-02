@@ -20,8 +20,8 @@ namespace MySpot.Core.ValueObjects
             Value = value;
         }
 
-        public static implicit operator string(LicensePlate licensePlate) => licensePlate?.Value;
+        public static implicit operator string(LicensePlate LicensePlate) => LicensePlate?.Value;
 
-        public static implicit operator LicensePlate(string licensePlate) => new(licensePlate);
+        public static implicit operator LicensePlate(string LicensePlate) => new(LicensePlate);
     }
 }

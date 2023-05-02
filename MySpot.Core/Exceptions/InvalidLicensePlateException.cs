@@ -3,10 +3,10 @@
     public sealed class InvalidLicensePlateException : CustomException
     {
         public string LicensePlate { get; }
-        public InvalidLicensePlateException(string licensePlate)
-            : base($"License plate: {licensePlate} is invalid")
+        public InvalidLicensePlateException(string LicensePlate)
+            : base($"License plate: {LicensePlate} is invalid")
         {
-            LicensePlate = licensePlate;
+            LicensePlate = LicensePlate;
         }
     }
 
